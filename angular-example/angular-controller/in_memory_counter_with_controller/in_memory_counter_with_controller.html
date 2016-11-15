@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../lib/angular/angular.js"></script>
+    <script src="in_memory_counter.controller.js"></script>
+</head>
+
+<body>
+    <div ng-app="CounterApp">
+    <div ng-controller="CounterController">
+        <button ng-click="increment()">Increment</button>
+        <button ng-click="decrement()">Decrement</button>
+        {{counter}}
+    </div>
+</div>
+
+</body>
+
+</html>

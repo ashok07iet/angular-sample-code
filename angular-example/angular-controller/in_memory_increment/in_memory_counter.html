@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../lib/angular/angular.js"></script>
+
+</head>
+
+<body>
+    <div ng-app>
+        <div ng-init="counter = 0"></div>
+        <button ng-click="counter = counter + 1">Increment</button>
+        <button ng-click="counter = counter - 1">Decrement</button>
+        {{counter}}
+    </div>
+
+</body>
+
+</html>
