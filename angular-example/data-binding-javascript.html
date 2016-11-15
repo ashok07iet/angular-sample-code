@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+name:<input id="fname" type="text" name="name" onChange="myFunction()"/><br/>
+<label style="background-color:red" id="fout">how </label>
+<script>
+//document.getElementById("fname").onchange = function() {myFunction()};
+function myFunction() {
+    var x = document.getElementById("fname");
+    var result=document.getElementById("fout");
+    result.innerHTML ='hello ' + x.value;
+}
+</script>
+    </body>
+</html>
