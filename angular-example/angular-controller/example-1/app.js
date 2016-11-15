@@ -7,7 +7,5 @@
            {name:"redy",city:"Hyderabad" },
            {name:"Dinesh",city:"Tamilndu" },
         ];
-        $scope.students=[];
-
     }]);
 })();
