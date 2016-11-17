@@ -6,12 +6,15 @@
 (function(){
   var myApp=angular.module('myApp',[]);
   myApp.controller('HelloController',['$scope','HelloService',function($scope,HelloService){
-        $scope.message=HelloService.sayHello();  
+        $scope.message=HelloService;  
   }]);
-   myApp.service('HelloService',[function(){
-         this.sayHello=function(){
-            return "Hello user";
-         };
-   }]);  
+   myApp.factory('HelloService',[function(){
+           console.log("factory is called");
+         return "Hello user";  
+   }]);
+   
+     myApp.controller('HelloController2',['$scope','HelloService',function($scope,HelloService){
+        $scope.message=HelloService;  
+  }]);
 })();
 

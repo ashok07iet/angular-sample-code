@@ -9,9 +9,14 @@
         $scope.message=HelloService.sayHello();  
   }]);
    myApp.service('HelloService',[function(){
-         this.sayHello=function(){
-            return "Hello user";
-         };
-   }]);  
+           console.log("HelloService is called");
+           this.sayHello=function(){
+                return "Hello user";
+           };     
+   }]);
+   
+     myApp.controller('HelloController2',['$scope','HelloService',function($scope,HelloService){
+        $scope.message=HelloService.sayHello();  
+  }]);
 })();
 

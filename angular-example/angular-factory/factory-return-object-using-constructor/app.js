@@ -8,10 +8,15 @@
   myApp.controller('HelloController',['$scope','HelloService',function($scope,HelloService){
         $scope.message=HelloService.sayHello();  
   }]);
-   myApp.service('HelloService',[function(){
-         this.sayHello=function(){
-            return "Hello user";
-         };
+   myApp.factory('HelloService',[function(){
+         return new Hello();  
    }]);  
+   
+   function Hello(){
+       this.sayHello=function(){
+          return "Hello user from Hello Object";  
+          
+       };
+   }
 })();
 
