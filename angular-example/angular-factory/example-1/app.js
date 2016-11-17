@@ -19,7 +19,7 @@
             }
         };
     });
-
+   
     myApp.factory('CalculatorService', function(MathService) {
         return {
             square: function(a) {

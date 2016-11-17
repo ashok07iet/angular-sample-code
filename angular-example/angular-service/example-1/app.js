@@ -1,5 +1,5 @@
 (function () {
-    var myApp = angular.module('myApp', []);
+    var myApp= angular.module('myApp', []);
     myApp.service('MathService', function () {
         this.add = function (a, b) {
             return a + b;
@@ -18,7 +18,7 @@
         };
     });
 
-    myApp.service('CalculatorService', function (MathService) {
+    myApp.service('CalculatorService', ['MathService',function (MathService) {
 
         this.square = function (a) {
             return MathService.multiply(a, a);
@@ -27,7 +27,7 @@
             return MathService.multiply(a, MathService.multiply(a, a));
         };
 
-    });
+    }]);
     myApp.controller('CalculatorController', function ($scope, CalculatorService) {
 
         $scope.doSquare = function () {

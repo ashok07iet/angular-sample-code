@@ -1,4 +1,5 @@
-var myApp = angular.module('myApp', []);
+(function(){
+  var myApp = angular.module('myApp', []);
 myApp.controller('MainController', ['$scope', function($scope) {
   $scope.timeOfDay = 'morning';
   $scope.name = 'Nikki';
@@ -9,4 +10,10 @@ myApp.controller('ChildController', ['$scope', function($scope) {
 myApp.controller('GrandChildController', ['$scope', function($scope) {
   $scope.timeOfDay = 'evening';
   $scope.name = 'Gingerbread Baby';
-}]);
+}]);  
+    
+})();
+
+
+
+ 
