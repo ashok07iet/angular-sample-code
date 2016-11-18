@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hello world</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="FriendController">
+           Search: <input ng-model="search"/><br/><br/>
+            <table>
+                <tr>
+                    <th>name</th>
+                    <th>city</th>
+                </tr>  
+                <tr ng-repeat="friend in friends| filter:{name:search}">
+                    <td>{{friend.name}}</td>
+                    <td>{{friend.city}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

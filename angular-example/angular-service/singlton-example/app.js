@@ -5,7 +5,8 @@
  */
 (function(){
   var myApp=angular.module('myApp',[]);
-  myApp.controller('HelloController',['$scope','HelloService',function($scope,HelloService){
+  myApp.controller('HelloController1',['$scope','HelloService',function($scope,HelloService){
+          console.log("HelloController1 is called");
         $scope.message=HelloService.sayHello();  
   }]);
    myApp.service('HelloService',[function(){
@@ -16,6 +17,7 @@
    }]);
    
      myApp.controller('HelloController2',['$scope','HelloService',function($scope,HelloService){
+              console.log("HelloController2 is called");
         $scope.message=HelloService.sayHello();  
   }]);
 })();
