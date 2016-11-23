@@ -11,11 +11,7 @@
                 {name: "Beverly", city: "Ventura"},
                 {name: "Jean-Luc", city: "Beverly Hills"}
             ];
-            $scope.matchName = function (query) {
-                return function (friend) {
-                    return friend.name.match(query);
-                };
-            };
+          
         }]);
 })();
 

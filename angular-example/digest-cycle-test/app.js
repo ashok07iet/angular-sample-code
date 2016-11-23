@@ -5,6 +5,7 @@ angular.module('myApp', [])
         $scope.c = 30;
         $scope.$watch('a',function(){
             console.log("a is modified");
+            $scope.b=$scope.a+5;
         });
         $scope.$watch('b',function(){
             console.log("b is modified");
