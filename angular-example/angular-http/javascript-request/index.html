@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+   <div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "myTutorials.txt";
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        console.log("data ready");
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", 'http://localhost:8080/customer-service/customers/', true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].FirstName + '">' + 
+        arr[i].LastName + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+console.log("file render end");
+</script>
+    </body>
+</html>
+

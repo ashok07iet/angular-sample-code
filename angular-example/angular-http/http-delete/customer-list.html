@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>customer list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="customer.controller.js"></script>
+        <script src="customer.service.js"></script>
+    </head>
+   <body ng-app="myApp">
+        <div ng-controller="customerController">
+            <table>
+                <tr>
+                    <th>customerId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Action</th>
+                </tr>  
+                <tr ng-repeat="cus in customers">
+                    <td>{{cus.customerId}}</td>
+                    <td>{{cus.FirstName}}</td>
+                    <td>{{cus.LastName}}</td>
+                    <td><button ng-click='delete(cus.customerId)'>delete</button></td>
+                     
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

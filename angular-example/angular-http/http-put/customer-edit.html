@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>customer list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="customer.controller.js"></script>
+        <script src="customer.service.js"></script>
+    </head>
+   <body ng-app="myApp">
+        <div ng-controller="customerController">
+            <label>customerId</label><input ng-model='cusId'/><button ng-click='find()'>find</button><br/>
+            
+            <h1>customer Detail</h1><br/>
+            <form>
+                <label>customerId</label> <input ng-model="customer.customerId"><br/><br/>
+                <label>FirstName</label> <input ng-model="customer.FirstName"><br/><br/>
+                <label>LastName</label> <input ng-model="customer.LastName"><br/><br/>
+                <label>Email</label> <input ng-model="customer.Email"><br/><br/>
+                <label>Address</label> <input ng-model="customer.Address"><br/><br/>
+                <label>City</label> <input ng-model="customer.City"><br/><br/>
+                <label>Zip</label> <input ng-model="customer.Zip"><br/><br/>
+                <label>Gender</label> <input ng-model="customer.Gender"><br/><br/>
+                <label>State</label> <br/><br/>
+                <label>Name</label> <input ng-model="customer.State.Name"><br/><br/>
+                <label>Abbreviation</label> <input ng-model="customer.State.Abbreviation"><br/><br/> 
+                <button ng-click='update()'>update</button>
+            </form>
+            
+            <span>{{message}}</span>
+            
+        </div>
+    </body>
+</html>
