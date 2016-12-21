@@ -6,18 +6,17 @@
 (function(){
  var myApp=angular.module('myApp');
 myApp.service('customerService',['$http',function($http){
-        this.getCustomers = function () {
+        this.updateCustomer = function (customer) {
+            return $http({
+                method: 'Put',
+                url: 'http://localhost:8080/customer-service/customers/',
+                data:customer
+            });
+        };
+          this.getCustomer = function (id) {
             return $http({
                 method: 'Get',
-                url: 'http://localhost:8080/customer-service/customers/'
-            });
-            
-        };
-        this.deleteCustomers = function (id) {
-            return $http({
-                method: 'Delete',
                 url: 'http://localhost:8080/customer-service/customers/'+id
-                
             });
         };
 }]);

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>customer list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../../lib/angular/angular.js"></script>
+        <script src="customer.controller.js"></script>
+        <script src="customer.service.js"></script>
+    </head>
+   <body ng-app="myApp">
+        <div ng-controller="customerController">
+             <label>customerName</label><input ng-model='name'/><button ng-click='find()'>find</button><br/>
+            <table>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>  
+                <tr>
+                    <td>{{customer.FirstName}}</td>
+                    <td>{{customer.LastName}}</td>
+                </tr>
+            </table>
+             <br/><br/>
+             <h1>customer orders</h1>
+              <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>  
+                <tr ng-repeat="order in orders">
+                    <td>{{order.Product}}</td>
+                    <td>{{order.Price}}</td>
+                    <td>{{order.Quantity}}</td>
+                </tr>
+            </table>
+             <div ng-if="error">{{error}}</div>
+        </div>
+       
+    </body>
+</html>

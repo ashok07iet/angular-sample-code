@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>promise example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+   <body ng-app="myApp">
+        <div ng-controller="ToDoController">
+            <button ng-click="getTodoList()">getTodoList</button>
+            <div ng-show="status==='PENDING'">Percentage:{{percentage }}</div>
+            <div ng-show="status==='DONE'">
+                <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Stared</th>
+                    <th>estimatedTime</th>
+                </tr>  
+                <tr ng-repeat="l in list">
+                    <td>{{l.task}}</td>
+                    <td>{{l.stared}}</td>
+                    <td>{{l.estimatedTime}}</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </body>
+</html>

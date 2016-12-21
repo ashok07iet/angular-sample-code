@@ -9,15 +9,8 @@ myApp.service('customerService',['$http',function($http){
         this.getCustomers = function () {
             return $http({
                 method: 'Get',
-                url: 'http://localhost:8080/customer-service/customers/'
-            });
-            
-        };
-        this.deleteCustomers = function (id) {
-            return $http({
-                method: 'Delete',
-                url: 'http://localhost:8080/customer-service/customers/'+id
-                
+                url: 'http://localhost:8080/customer-service/customers/',
+                headers:{'remote-user':'admin'}
             });
         };
 }]);
