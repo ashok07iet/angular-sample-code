@@ -24,11 +24,20 @@
                 });
             };
         }]);
-    myApp.service('ArticleService',['$q',function($q){
+      myApp.service('ArticleService',['$q',function($q){
             this.getArticles=function(articalName){
+                 var articles = {
+                     'angular': 'http://www.tothenew.com/blog/angularjs-deferred-promises-basic-understanding/',
+                     'javascript':'https://davidwalsh.name/promises'
+                 };
                  var defer = $q.defer();
+                 if(articles[articalName]){
                  defer.resolve(articalName+':http://www.tothenew.com/blog/angularjs-deferred-promises-basic-understanding/');
-                 return defer.promise;
+                 
+             }else{
+                defer.reject('no artical found for '+articalName); 
+             }
+             return defer.promise;
             };
     }]);
 })();
