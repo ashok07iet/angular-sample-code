@@ -7,7 +7,16 @@
 (function () {
     var myApp = angular.module("myApp", []);
     myApp.controller('formController', ['$scope', function ($scope) {
-            $scope.myForm = {};
-            $scope.myForm.name = "";//"Jakob Jenkov";
+            $scope.master = {};
+
+            $scope.update = function (user) {
+                $scope.master = angular.copy(user);
+            };
+
+            $scope.reset = function () {
+                $scope.user = angular.copy($scope.master);
+            };
+
+            $scope.reset();
         }]);
 })();

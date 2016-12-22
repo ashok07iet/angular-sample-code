@@ -8,11 +8,13 @@
     var myApp = angular.module("myApp", []);
     myApp.controller('customerController', ['$scope', 'customerService', function ($scope, customerService) {
               $scope.find=function(){
+                  var cus;
                 var result = customerService.getCustomer($scope.name);
                 result.then(function(response){
-                     $scope.customer=response.data;
-                     return customerService.getOrders($scope.customer.customerId);
+                    cus=response.data;
+                     return customerService.getOrders(cus.customerId);
                 }).then(function(response){
+                    $scope.customer=cus;
                     $scope.orders=response.data;
                 }).catch(function(e){
                     $scope.error=e;
