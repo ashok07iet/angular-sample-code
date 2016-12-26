@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+Creating Directives:
+    First let's talk about the API for registering directives. 
+    Much like controllers, directives are registered on modules.
+    To register a directive, you use the module.directive API. 
+    module.directive takes the normalized directive name followed by a factory function.
+    This factory function should return an object with the different options to tell $compile how the directive should behave when matched
+    note: never create custom directive prefix with ng as it may have collision with directive include in angular future version.
+-->
+<html>
+    <head>
+        <title>form example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="Controller">
+        <div data-my-customer></div>  
+ </div>
+    </body>
+</html>

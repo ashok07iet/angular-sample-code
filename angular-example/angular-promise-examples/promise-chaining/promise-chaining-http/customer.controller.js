@@ -14,8 +14,9 @@
                     cus=response.data;
                      return customerService.getOrders(cus.customerId);
                 }).then(function(response){
+                    cus.orders=response.data;
                     $scope.customer=cus;
-                    $scope.orders=response.data;
+                    
                 }).catch(function(e){
                     $scope.error=e;
                 });    

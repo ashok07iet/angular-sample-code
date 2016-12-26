@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1>Directive types</h1>
+        <p>
+            $compile can match directives based on element names, attributes, class names, as well as comments.
+            All of the Angular-provided directives match attribute name, tag name, comments, or class name.
+            The following demonstrates the various ways a directive (myDir in this case) can be referenced from within a template.</p>
+        <h1>examples</h1>
+        <ul>  
+            <li> &lt;my-dir&gt&lt/my-dir&gt</li>
+            <li>&lt;span my-dir="exp"&gt&lt/span&gt</li>
+            <li>&lt!-- directive: my-dir exp --&gt</li>
+            <li>&ltspan class="my-dir: exp;"&gt&lt/span&gt</li>
+        </ul>
+    <h1>Best Practice:</h1> 
+    <p>
+        Prefer using directives via tag name and attributes over comment and class names. 
+        Doing so generally makes it easier to determine what directives a given element matches.
+
+        When you create a directive, it is restricted to attribute and elements only by default.
+        In order to create directives that are triggered by class name, you need to use the restrict option.
+    </p>
+    <p>
+        The restrict option is typically set to:
+    <ul>
+        <li>'A' - only matches attribute name</li>
+        <li>'E' - only matches element name</li>
+        <li>'C' - only matches class name</li>
+        <li>'M' - only matches comment</li>
+    </ul>
+     These restrictions can all be combined as needed:
+    'AEC' - matches either attribute or element or class name
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+      templateUrl can also be a function which returns the URL of an HTML template to be loaded 
+      and used for the directive. Angular will call the templateUrl function with two parameters: 
+      the element that the directive was called on, and an attr object associated with that element.
+-->
+<html>
+    <head>
+        <title>form example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="Controller">
+            <div my-customer type="name"></div>
+            <div my-customer type="address"></div>
+        </div>
+    </body>
+</html>
+

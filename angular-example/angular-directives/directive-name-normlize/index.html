@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+    Normalization:
+     Angular normalizes an element's tag and attribute name to determine which elements match which directives.
+     We typically refer to directives by their case-sensitive camelCase normalized name (e.g. ngModel).
+     However, since HTML is case-insensitive, we refer to directives in the DOM by lower-case forms, typically using dash-delimited attributes on DOM elements (e.g. ng-model).
+    The normalization process is as follows
+        1.Strip x- and data- from the front of the element/attributes.
+        2.Convert the :, -, or _-delimited name to camelCase.
+     Best Practice: 
+     Prefer using the dash-delimited format (e.g. ng-bind for ngBind). 
+     If you want to use an HTML validating tool, you can instead use the data-prefixed version (e.g. data-ng-bind for ngBind). 
+     The other forms shown above are accepted for legacy reasons but we advise you to avoid them.
+-->
+<html>
+    <head>
+        <title>form example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="ExController">
+            Hello <input ng-model='name'> <hr/>
+            <span ng-bind="name"></span> <br/>
+            <span ng:bind="name"></span> <br/>
+            <span ng_bind="name"></span> <br/>
+            <span data-ng-bind="name"></span> <br/>
+            <span x-ng-bind="name"></span> <br/>
+        </div>
+    </body>
+</html>
