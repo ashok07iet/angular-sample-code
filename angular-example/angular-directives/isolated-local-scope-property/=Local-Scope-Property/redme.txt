@@ -1,0 +1,3 @@
+The @ character works well for accessing a string value that is passed into a directive as shown in the previous example.
+However, it won’t keep changes made in the directive in-sync with the external/outer scope.
+In cases where you need to create a two-way binding between the outer scope and the directive’s isolate scope you can use the = character

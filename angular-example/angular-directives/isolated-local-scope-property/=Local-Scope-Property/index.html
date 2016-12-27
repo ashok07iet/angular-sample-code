@@ -8,16 +8,12 @@
         <title>form example</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../../lib/angular/angular.js"></script>
+        <script src="../../../lib/angular/angular.js"></script>
         <script src="controller.js"></script>
     </head>
     <body ng-app="myApp">
-
         <div ng-controller="Controller">
-            {{message}}
-            <my-dialog ng-hide="dialogIsHidden" close="hideDialog(message)">
-                Check out the contents, {{name}}!
-            </my-dialog>
+            <div my-isolated-scope-with-model customer="customer"></div>
         </div>
     </body>
 </html>

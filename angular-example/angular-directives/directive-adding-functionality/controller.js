@@ -23,7 +23,7 @@
                     restrict: 'E',
                     transclude: true,
                     scope: {
-                        'close': '&onClose'
+                        'close': '&'
                     },
                     templateUrl: 'my-dialog-close.html'
                 };

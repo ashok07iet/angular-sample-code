@@ -13,9 +13,7 @@
             .directive('myCustomer', function () {
                 return {
                     restrict: 'E',
-                    scope: {
-                        customerInfo: '=info'
-                    },
+                    
                     templateUrl: 'my-customer-plus-vojta.html'
                 };
             });

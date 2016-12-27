@@ -1,0 +1,4 @@
+ The @ local scope property is used to access string values that are defined outside the directive.
+ For example, a controller may defined a name property on the $scope object and you need to get access to that property within the directive. 
+ To do that, you can use @ within the directive’s scope property.
+ Here’s a high level example of that concept with a step-by-step explanation:
