@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+        Unless your template is very small, 
+        it's typically better to break it apart into its own HTML file and load it with the templateUrl option.
+-->
+<html>
+    <head>
+        <title>form example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../../lib/angular/angular.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body ng-app="directivesModule">
+        <div ng-controller="controller">
+        Attribute: <div isolate-scope-with-controller datasource="customers" add="addCustomer()"></div>
+
+         Element: <isolate-scope-with-controller datasource="customers" add="addCustomer()">
+         </isolate-scope-with-controller>
+         </div>
+    </body>
+</html>

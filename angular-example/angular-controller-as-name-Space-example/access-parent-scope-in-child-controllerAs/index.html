@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+it turns out that using $parent is actually a bad practice, since we start coupling our expression code to the underlying DOM structure,
+which makes our code less maintainable. Just imagine you have not only two nested scopes, but four or five. 
+That would bring you into $parent.$parent.$parent.$parent hell, right?
+-->
+<html>
+    <head>
+        <title>angular-controller-example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="ControllerOne as ctr1">
+            {{ctr1.foo}}
+            <div ng-controller="ControllerTwo as ctr2">
+                {{ctr1.foo}}
+            </div>
+        </div>
+    </body>
+</html>

@@ -5,13 +5,10 @@
  */
 
 (function () {
-    var myApp = angular.module("myApp", []);
-    myApp.controller('Controller', ['$scope', function ($scope) {
+
+    var app = angular.module('directivesModule', []);
+    app.controller("controller", ['$scope', function ($scope) {
             var counter = 0;
-            $scope.customer = {
-                name: 'David',
-                street: '1234 Anywhere St.'
-            };
             $scope.customers = [
                 {
                     name: 'David',
@@ -26,7 +23,6 @@
                     street: '890 Main St.'
                 }
             ];
-
             $scope.addCustomer = function () {
                 counter++;
                 $scope.customers.push({
@@ -34,20 +30,15 @@
                     street: counter + ' Cedar Point St.'
                 });
             };
-
-            $scope.changeData = function () {
-                counter++;
-                $scope.customer = {
-                    name: 'James',
-                    street: counter + ' Cedar Point St.'
-                };
-            };
-        }]).directive('myIsolatedScopeWithModel', function () {
+        }]);
+    app.directive('isolateScopeWithController', function () {
         return {
+            restrict: 'EA', //Default in 1.3+
             scope: {
-                customer: '=' //Two-way data binding
             },
-            template: '<ul><li ng-repeat="prop in customer">{{ prop }}</li></ul>'
+            controller: 'controller',
+            templateUrl: 'customer-list.html'
         };
     });
-})();
+
+}());

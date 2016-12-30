@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>filter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../../lib/angular/angular.js"></script>
+        <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div ng-app="filters">
+        <div ng-controller="demo">
+          <div class="panel panel-default">
+             <div class="panel-body">
+               <h4 class="text-center">AngularJS Filter - Ordinal Numbers</h4>
+               <p><strong>Original:</strong></p>
+               <ul class="list">
+                 <li>{{example1}}</li>
+                 <li>{{example2}}</li>
+                 <li>{{example3}}</li>
+                 <li>{{example4}}</li>
+                 <li>{{example5}}</li>
+                 <li>{{example6}}</li>
+                 <li>{{example7}}</li>
+                 <li>{{example8}}</li>
+               </ul>
+               <p><strong>Ordinal Filter:</strong></p>
+               <ul class="list">
+                 <li>{{example1 | ordinal}}</li>
+                 <li>{{example2 | ordinal}}</li>
+                 <li>{{example3 | ordinal}}</li>
+                 <li>{{example4 | ordinal}}</li>
+                 <li>{{example5 | ordinal}}</li>
+                 <li>{{example6 | ordinal}}</li>
+                 <li>{{example7 | ordinal}}</li>
+                 <li>{{example8 | ordinal}}</li>
+               </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </div>
+    </body>
+</html>

@@ -1,3 +1,0 @@
-
-Directives that use isolate scope provide 3 different options to interact with the outside world (the world on the other side of the wall).
-The 3 options are referred to as Local Scope Properties and can be defined using the @, =, and & characters mentioned earlier. Here’s how they work.

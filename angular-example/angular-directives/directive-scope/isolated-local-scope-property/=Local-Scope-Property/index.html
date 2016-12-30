@@ -8,15 +8,13 @@
         <title>form example</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../../../lib/angular/angular.js"></script>
+        <script src="../../../../lib/angular/angular.js"></script>
         <script src="controller.js"></script>
     </head>
     <body ng-app="myApp">
         <div ng-controller="Controller">
-            <div my-isolated-scope-with-model-and-function 
-                 datasource="customer" 
-                 action="changeData()">
-            </div>
+            <input ng-model="counterVal"/>
+            <div my-isolated-scope-with-model counter1="counterVal"></div>
         </div>
     </body>
 </html>
