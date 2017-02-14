@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script>
+      function add(){
+        var a=document.getElementById("fnumber").value; 
+        var b=document.getElementById("snumber").value;
+          
+          var c=Number.parseInt(a)+Number.parseInt(b);
+          document.getElementById("result").innerHTML=c;
+      }
+    </script>   
+  
+    
+    
+</head>
+
+<body>
+    first Number:<br/>
+    <input type="text" name="fnumber" id="fnumber"/><br/>
+     second Number:<br/>
+    <input type="text" name="snumber" id="snumber"/><br/><br/>
+    <input type="button" namr="add" value="add" onclick="add()"/><br/>
+     result :<br/>
+    <label id="result"></label>
+ 
+</body>
+
+
+</html>
