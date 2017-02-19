@@ -11,9 +11,13 @@
   }]);
    myApp.service('HelloService',[function(){
            console.log("HelloService is called");
+           var message="Hello user";
            this.sayHello=function(){
-                return "Hello user";
-           };     
+                return message;
+           };
+            this.setMessage=function(msg){
+                return this.message=msg;
+           }; 
    }]);
    
      myApp.controller('HelloController2',['$scope','HelloService',function($scope,HelloService){
