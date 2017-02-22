@@ -30,7 +30,7 @@
                         } else {
                             defer.reject('Greeting ' + name + ' is not allowed.');
                         }
-                    }, 1000);
+                    }, 5000);
 
                     return defer.promise;
                 

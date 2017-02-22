@@ -1,0 +1,11 @@
+<div>
+    <div>
+        <h2> <strong>{{guitarDetail.name | lowercase }}</strong></h2>
+        <p >Price Revised on: {{guitarDetail.dateAdded | date:'MM/yy'}}</p>
+        <p >${{guitarDetail.price | number:0 }}</p>
+        <p> {{guitarDetail.description}}</p>
+        <p>{{guitarDetail.longDescription}}</p>
+        <br><hr><br>
+        <a href="index.html">« Go back to Search</a>
+    </div>
+</div>
