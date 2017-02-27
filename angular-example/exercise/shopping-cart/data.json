@@ -1,0 +1,5 @@
+[
+{title: 'Red Wine', quantity: 3, price: 3.95},
+{title: 'White Wine', quantity: 7, price: 12.95},
+{title: 'Blue Wine', quantity: 5, price: 6.95}
+]

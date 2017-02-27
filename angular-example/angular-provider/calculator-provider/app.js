@@ -1,6 +1,6 @@
 (function() {
-    var myApp = angular.module('myApp', []);
-    myApp.factory('MathService', function() {
+     angular.module('myApp', []).
+    factory('MathService', function() {
         return {
             add: function(a, b) {
                 return a + b;
@@ -18,9 +18,7 @@
                 return a / b;
             }
         };
-    });
-   
-    myApp.provider('CalculatorService', function() {
+    }).provider('CalculatorService', function() {
         this.$get=function(MathService){
         return {
             square: function(a) {

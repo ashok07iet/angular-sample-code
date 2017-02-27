@@ -12,7 +12,9 @@
                 {name: "Jean-Luc", city: "Beverly Hills"}
             ];
             $scope.matchName = function (query) {
+                console.log("outer function");
                 return function (friend) {
+                    console.log("inner function");
                     return friend.name.match(query);
                 };
             };

@@ -10,11 +10,13 @@
               $scope.find=function(){
                 var result = customerService.getCustomer($scope.cusId);
                 result.success(function (response) {
+                    console.log("sucess");
                     $scope.customers = response;
                 });
                 result.error(function (err) {
                     console.log(err);
                 }); 
+                console.log('function end');
             };
         }]);
 })();

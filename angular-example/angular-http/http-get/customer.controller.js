@@ -9,7 +9,7 @@
     myApp.controller('customerController', ['$scope', 'customerService', function ($scope, customerService) {
             var result = customerService.getCustomers();
             result.then(function (response) {
-                $scope.customers = response;
+                $scope.customers = response.data;
             });
       
         }]);
