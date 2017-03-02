@@ -8,15 +8,15 @@
         <title>form example</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../../lib/angular/angular.js"></script>
+        <script src="../../../../lib/angular/angular.js"></script>
         <script src="controller.js"></script>
     </head>
     <body ng-app="myApp">
-
         <div ng-controller="Controller">
-            Date format: <input ng-model="format"> <hr/>
-            Current time is: <span my-current-time="format"></span>
+            <div my-isolated-scope-with-model-and-function 
+                 datasource="customer" 
+                 action="changeData">
+            </div>
         </div>
-
     </body>
 </html>

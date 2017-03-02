@@ -33,7 +33,7 @@ Custom error message displayed upon submitting the form ($submitted is set), eve
         <div ng-controller="formController" >
             <form name="form" class="css-form" novalidate>
                 <label>Name:
-                    <input type="text" ng-model="user.name" name="uName" required="" />
+                    <input type="text" ng-model="user.name" name="uName" required />
                 </label>
                 <br />
                 <div ng-show="form.$submitted || form.uName.$touched">

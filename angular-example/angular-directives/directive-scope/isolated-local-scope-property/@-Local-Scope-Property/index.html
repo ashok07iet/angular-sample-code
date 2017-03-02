@@ -13,6 +13,7 @@
     </head>
     <body ng-app="myApp">
         <div ng-controller="Controller">
+            <input type="text" ng-model="customer.name"/>
             <div my-isolated-scope-with-name name="{{ customer.name }}"></div>
         </div>
     </body>
