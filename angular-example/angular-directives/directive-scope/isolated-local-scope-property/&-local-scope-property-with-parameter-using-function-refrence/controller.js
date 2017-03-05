@@ -54,7 +54,7 @@
                 };
             },
             template: '<ul><li ng-repeat="prop in datasource">{{ prop }}</li></ul> ' +
-                    '<button ng-click="changeCustomer()">Change Data</button>'
+                    '<button ng-click="action()(\'ashok\',\'btm\')">Change Data</button>'
         };
     });
 })();
