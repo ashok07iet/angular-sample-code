@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body id="myApp" ng-app="myApp">
+    <div ng-controller="MainCtrl">
+       <clickable foo="foo" bar="bar"></clickable>
+      <hr />
+   {{ hello }} <button ng-click="setHello()">Change hello</button>
+    </div>
+</body>
+
+</html>

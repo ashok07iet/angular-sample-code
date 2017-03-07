@@ -9,10 +9,10 @@ angular.module('myApp', [])
         });
         $scope.$watch('b',function(){
             console.log("b is modified");
-            $scope.a=$scope.b+10;
         });
         $scope.$watch('c',function(){
             console.log("c is modified");
+            $scope.a=$scope.a+10;
         });
         $rootScope.$watch(function(){
             console.log("digest cycle triggred");
