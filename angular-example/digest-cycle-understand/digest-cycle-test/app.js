@@ -9,6 +9,7 @@ angular.module('myApp', [])
         });
         $scope.$watch('b',function(){
             console.log("b is modified");
+            $scope.a=$scope.a+3;
         });
         $scope.$watch('c',function(){
             console.log("c is modified");

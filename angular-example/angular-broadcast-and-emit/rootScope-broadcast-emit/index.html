@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="ParentCtrl as parent" >
+  // ParentCtrl
+  <div ng-controller="SiblingOneCtrl as sib1">
+    // SiblingOneCtrl
+     <div ng-controller="ChildCtrl as child">
+      // ChildCtrl
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

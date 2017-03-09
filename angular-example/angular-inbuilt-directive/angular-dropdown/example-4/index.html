@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>angular-select</title>
+        <script src="../../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="ExampleController">
+            <form name="myForm">
+                <label for="mySelect">Make a choice:</label>
+                <select name="mySelect" id="mySelect"
+                        ng-options="option.name for option in data.availableOptions track by option.id"
+                        ng-model="data.selectedOption"></select>
+            </form>
+            <hr>
+            <tt>option = {{data.selectedOption}}</tt><br/>
+        </div>
+    </body>
+</html>

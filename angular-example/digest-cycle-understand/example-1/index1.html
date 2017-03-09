@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
 <head>
-    <title>angular data binding</title>
+    <title>angular digest cycle</title>
     <script src="../../lib/angular/angular.js"></script>
     
 </head>
 
 <body ng-app="">
-    <input type="text" ng-model="user"/>
-    <input type="password" ng-model="passwrod">
+    name:<input type="text" ng-model="user"/>
+    password:<input type="password" ng-model="passwrod">
+    {{user}}
 </body>
 
 </html>

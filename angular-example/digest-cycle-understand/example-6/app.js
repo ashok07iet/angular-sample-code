@@ -26,10 +26,13 @@ app.directive('clickable', function() {
     template: '<ul style="background-color: lightblue"><li>{{foo}}</li><li>{{bar}}</li></ul>',
     link: function(scope, element, attrs) {
       element.bind('click', function() {
-          scope.$apply(function(){
+           scope.foo++;
+        scope.bar++;
+         scope.$apply();
+         /* scope.$apply(function(){
                scope.foo++;
         scope.bar++;
-          });
+          });*/
       });
     }
   };

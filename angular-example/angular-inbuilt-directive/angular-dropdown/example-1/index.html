@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>angular-select</title>
+    <script src="../../../lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <select ng-model="selectedName" multiple>
+                <option value="">please select</option>
+                <option ng-repeat="x in names">{{x}}</option>
+            </select>
+            <span>selected value::{{selectedName}}</span> 
+        </div>
+        
+    </body>
+</html>
