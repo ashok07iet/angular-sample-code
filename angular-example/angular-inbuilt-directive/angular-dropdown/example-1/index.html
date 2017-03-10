@@ -12,7 +12,7 @@ and open the template in the editor.
 </head>
     <body ng-app="myApp">
         <div ng-controller="myCtrl">
-            <select ng-model="selectedName" multiple>
+            <select ng-model="selectedName" >
                 <option value="">please select</option>
                 <option ng-repeat="x in names">{{x}}</option>
             </select>
