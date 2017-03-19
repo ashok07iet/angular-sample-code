@@ -1,0 +1,10 @@
+Angular runs $parse automatically when it runs the $digest loop, basically $parse is the way angular evaluates expressions.
+If you wanted to manually parse an expression,you can inject the $parse service into a controller and call the service to do the parsing for you.
+1. Converts AngularJS expression into a function.
+$parse : This service is used as a getter/setter for single variables only. e.g would be
+$scope.text = 'abc';
+$parse('text')($scope);  //this will result in abc
+$parse('text').assign($scope,'xyz');
+
+$interpolate : This service is used to evaluate angular expressions. You can run an entire string against a scope,
+ and interpolate will give the result. e.g would be
