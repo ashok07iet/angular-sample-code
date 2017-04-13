@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../../lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h1>ngRepeat to render duplicate value</h1>
+    <div  style="margin-top:100px;" ng-controller="simpleCtrl as vm">
+        <ul>
+            <li ng-repeat="value in vm.values track by $index">
+                {{value}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

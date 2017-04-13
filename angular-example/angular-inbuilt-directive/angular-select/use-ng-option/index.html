@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hello world</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="Test">
+            <p>select using ng-repeat</p>
+            <p>selected item is : {{selectedItem1}}</p>
+            <select ng-model="selectedItem1">
+                <option ng-repeat="item in items1" value="{{item}}">{{item}}</option>
+            </select>
+            <p>select using ng-option</p>
+            <p>selected item is : {{selectedItem2}}</p>
+            <p> age of selected item is : {{selectedItem2.age}} </p>
+            <select ng-model="selectedItem2" ng-options="item.name for item in items2">
+            </select>
+        </div>
+    </body>
+</html>

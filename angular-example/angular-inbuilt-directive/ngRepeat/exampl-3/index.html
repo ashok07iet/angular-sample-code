@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular data binding</title>
+    <script src="../../../lib/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="TasksCtrl">
+        <button ng-click="refresh()">Refresh Tasks</button> Click this to feel the delay, then change the HTML on the left to see the no-delay version that uses "track by"
+
+        <ul class="tasks">
+            <!-- Try commenting the line below and uncommenting the other -->
+            <li ng-repeat="task in tasks track by task.id">
+            <!--<li ng-repeat="task in tasks" class="task">-->
+                {{task.title}}-{{task.id}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
