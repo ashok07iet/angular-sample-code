@@ -16,7 +16,7 @@
             $get: function() {
                 return {
                     save: function(contact) {
-                        if (contact.id === null) {
+                        if (!contact.id) {
                             //if this is new contact, add it in contacts array
                             contact.id = uid++;
                             contacts.push(contact);

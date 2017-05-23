@@ -16,7 +16,8 @@ and open the template in the editor.
                 <option value="">please select</option>
                 <option ng-repeat="x in names">{{x}}</option>
             </select>
-            <span>selected value::{{selectedName}}</span> 
+            <span>selected value::{{selectedName}}</span>
+            <button ng-click="reset()"> reset</button>
         </div>
         
     </body>

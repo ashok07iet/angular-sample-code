@@ -13,7 +13,7 @@
                     controllerAs: "app"
                 }
         )
-       .when("/:firstName/:middleName/:lastName",
+       .when("/hello/:firstName/:middleName/:lastName",
                 {
                     templateUrl: "view/app2.html",
                     controller: "AppCtrl2",

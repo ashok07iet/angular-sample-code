@@ -9,8 +9,8 @@ angular.module('GuitarApp')
             function ($scope, GuitarService)
             {
                 GuitarService.getGuitarList()
-                        .then(function (data) {
-                            $scope.guitars = data;
+                        .then(function (response) {
+                            $scope.guitars = response.data;
                             $scope.orderGuitar = 'price';
                         });
             }]

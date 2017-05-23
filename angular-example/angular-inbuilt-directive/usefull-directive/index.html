@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Directive examples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../lib/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <style>
+            .red{
+                background-color: red; 
+            }  
+            .green{
+                background-color: green; 
+            } 
+            .yellow{
+                background-color: yellow; 
+            } 
+            .blue{
+                background-color: blue; 
+            } 
+        </style>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="appController">
+            <div> 
+                <p><b>ngBind</b></p>
+                <input type="text" ng-model="name">
+                <p>Hello <span ng-bind="name"></span></p>
+                <p>Hello <span >{{name}}</span><p>
+            </div>
+            <div> 
+                <p><b>ngClass</b></p>
+                color:<select ng-model="selectedColor">
+                    <option>red</option> 
+                    <option>green</option>
+                    <option>yellow</option>
+                    <option>blue</option>
+                </select>
+                <p ng-class="selectedColor"> 1.color this text as selected in color drop down</p>
+                <p ng-class="{red:selectedColor === 'red',green:selectedColor === 'green',yellow:selectedColor === 'yellow',blue:selectedColor === 'blue'}"> 2.color this text as selected in color drop down</p>
+            </div>
+            <div> 
+                <p><b>ngIf</b></p>
+                html element<select ng-model="selected">
+                    <option value="1">text Box</option> 
+                    <option value="2">text Area</option>
+                    <option value="3">check Box</option>
+                    <option value="4">radio Button</option>
+                </select><br/><br/>
+                <input ng-if="selected === '1'" type="text"/>
+                <input ng-if="selected === '4'" type="radio"/>
+                <input ng-if="selected === '3'" type="checkBox"/>
+                <textarea ng-if="selected === '2'"></textarea>
+
+            </div>
+            <div> 
+                <p><b>ngShow</b></p>
+                html element<select ng-model="select">
+                    <option value="1">text Box</option> 
+                    <option value="2">text Area</option>
+                    <option value="3">check Box</option>
+                    <option value="4">radio Button</option>
+                </select><br/><br/>
+                <input ng-show="select === '1'" type="text"/>
+                <input ng-show="select === '4'" type="radio"/>
+                <input ng-show="select === '3'" type="checkBox"/>
+                <textarea ng-show="select === '2'"></textarea>
+
+            </div>
+        </div>
+    </body>
+</html>

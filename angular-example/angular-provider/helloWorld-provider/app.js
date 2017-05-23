@@ -5,25 +5,26 @@
  */
 (function () {
     var myApp = angular.module('myApp', []);
-    myApp.controller('HelloController', ['$scope', 'HelloService', function ($scope, HelloService) {
-            $scope.message = HelloService.sayHello();
+    myApp.controller('WellcomeController', ['$scope', 'WellcomeService', function ($scope, WellcomeService) {
+            $scope.message = WellcomeService.sayHello();
         }]);
-    myApp.provider('HelloService', [function () {
-            var name;
+    myApp.provider('WellcomeService', [function () {
+            var appName="customer-App";
             this.setName = function (newName) {
-                name = newName;
+                appName = newName;
             };
             this.$get = function () {
+                
                 return {
                     sayHello: function () {
-                        return "hello " + name;
+                        return "Welcome " + appName;
                     }
                 };
             };
         }]);
-    myApp.config(function(HelloServiceProvider){
-        console.log("config run-----------------");
-        HelloServiceProvider.setName("John");
+    
+    myApp.config(function(WellcomeServiceProvider){
+        WellcomeServiceProvider.setName("admin-app");
     });
 })();
 

@@ -7,7 +7,7 @@
     angular.module('myApp', [])
             .controller('ExampleController', ['$scope', function ($scope) {
                     $scope.data = {
-                        singleSelect: null,
+                        singleSelect: "option-1",
                         multipleSelect: [],
                         option1: 'option-1'
                     };

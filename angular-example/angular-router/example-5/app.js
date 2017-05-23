@@ -21,7 +21,7 @@
                 });
     });
      app.controller('StudentController', function ($scope) {
-         console.log("inside controller")
+         console.log("inside controller");
             $scope.students = [
                 {name: 'Mark Waugh', city: 'New York'},
                 {name: 'Steve Jonathan', city: 'London'},
@@ -31,7 +31,7 @@
             $scope.message = "Click on the hyper link to view the students list.";
         });
         app.controller('StudentController1', function ($scope) {
-         console.log("inside controller")
+         console.log("inside controller1")
             $scope.students = [
                 {name: 'Mark Waugh', city: 'New York'},
                 {name: 'Steve Jonathan', city: 'London'},

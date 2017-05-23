@@ -7,9 +7,9 @@ angular.module('GuitarApp')
         .controller("DetailsController", ['$scope', 'GuitarService', '$routeParams',
             function ($scope, GuitarService, $routeParams)
             {
-                GuitarService.getGuitarDetail($routeParams.guitarID)
-                        .then(function (data) {
-                            $scope.guitarDetail = data;
+                GuitarService.getGuitarDetail()
+                        .then(function (response) {
+                            $scope.guitarDetail = response.data[$routeParams.guitarID];
                         });
             }]
                 );
