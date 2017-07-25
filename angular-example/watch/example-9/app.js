@@ -12,6 +12,6 @@ app.controller('MainCtrl', function($scope) {
   $scope.$watchCollection('user', function(newValue, oldValue) {
     if (newValue === oldValue) { return; }
     $scope.updated++;
-  }, true);
+  });
 });
 

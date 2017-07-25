@@ -40,6 +40,7 @@
                 // no logged user, redirect to /login
                 if (next.$$route.redirectTo === "/login") {
                 } else {
+                    $rootScope.nextUrl=next.$$route.redirectTo;
                     $location.path("/login");
                 }
             }
@@ -48,7 +49,7 @@
     app.controller("LoginCtrl", function ($scope, $location, $rootScope) {
         $scope.login = function () {
             $rootScope.loggedInUser = $scope.username;
-            $location.path("/");
+            $location.path($rootScope.nextUrl);
         };
     });
 })();

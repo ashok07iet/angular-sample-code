@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 var app=angular.module('myApp',[]);
-app.controller('MainCtrl', function($scope) {
+app.controller('MainCtrl', function($scope,$rootScope) {
   $scope.foo = "0";
   $scope.bar = "1";
   
@@ -13,6 +13,9 @@ app.controller('MainCtrl', function($scope) {
   $scope.setHello = function() {
     $scope.hello = "World";
   };
+  $scope.$watch(function(){
+      console.log('digest');
+  });
 });
 
 app.directive('clickable', function() {
@@ -24,11 +27,14 @@ app.directive('clickable', function() {
       bar: '='
     },
     template: '<ul style="background-color: lightblue"><li>{{foo}}</li><li>{{bar}}</li></ul>',
-    link: function(scope, element, attrs) {
+    link: 
+            
+                
+                function(scope, element, attrs) {
       element.bind('click', function() {
         scope.foo++;
         scope.bar++;
-        //scope.$apply();
+        scope.$digest();
       });
     }
   };

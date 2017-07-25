@@ -8,11 +8,11 @@ app.controller('MainCtrl', function($scope) {
   $scope.fruits = [];
   $scope.fruitCount = 0;
   $scope.add=function (){
-      $scope.fruits=[$scope.fruit];
+      $scope.fruits.push($scope.fruit);
   };
   $scope.$watch('fruits', function(newValue, oldValue) {
     if (newValue === oldValue) { return; }
       $scope.fruitCount=$scope.fruits.length;
-  });
+  },true);
 });
 

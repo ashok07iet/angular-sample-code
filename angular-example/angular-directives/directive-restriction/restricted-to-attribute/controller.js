@@ -15,7 +15,7 @@
         }])
             .directive('myCustomer', function () {
                 return {
-                    restrict: 'A',
+                    restrict: 'AE',
                     templateUrl: 'my-customer.html'
                 };
             });

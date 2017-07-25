@@ -9,7 +9,7 @@ myApp.service('customerService',['$http',function($http){
         this.updateCustomer = function (customer) {
             return $http({
                 method: 'Put',
-                url: 'http://localhost:8080/customer-service/customers/',
+                url: 'http://localhost:8080/customer-service/customers1/',
                 data:customer
             });
         };

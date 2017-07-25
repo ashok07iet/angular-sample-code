@@ -10,6 +10,8 @@
             var result = customerService.getCustomers();
             result.then(function (response) {
                 $scope.customers = response.data;
+            },function(error){
+                console.log('ashok');
             });
       
         }]);

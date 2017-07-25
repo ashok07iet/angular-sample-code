@@ -18,11 +18,10 @@
             };
             $scope.update=function(){
                 var result = customerService.updateCustomer($scope.customer);
-                result.success(function (response) {
+                result.then(function (response) {
                 $scope.customer = {};
                 $scope.message="save successfully";
-            });
-            result.error(function (err) {
+            },function (err) {
                 console.log(err);
                  $scope.message="error in save";
             });

@@ -9,7 +9,7 @@ myApp.service('customerService',['$http',function($http){
         this.getCustomers = function () {
              return $http({
                 method: 'Get',
-                url: 'customer.json'
+                url: 'customer.json1'
             });
         };
 }]);

@@ -19,7 +19,7 @@
                             element.text(dateFilter(new Date(), format));
                         }
 
-                        scope.$watch(attrs.myCurrentTime, function (value) {
+                        scope.$watch('format', function (value) {
                             format = value;
                             updateTime();
                         });
@@ -31,7 +31,7 @@
                         // start the UI update process; save the timeoutId for canceling
                         timeoutId = $interval(function () {
                             updateTime(); // update DOM
-                        }, 1000);
+                        }, 3000);
                     }
 
                     return {

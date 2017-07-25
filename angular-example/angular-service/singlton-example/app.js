@@ -8,6 +8,9 @@
   myApp.controller('HelloController1',['$scope','HelloService',function($scope,HelloService){
           console.log("HelloController1 is called");
         $scope.message=HelloService.sayHello();  
+        $scope.setMessage=function(){
+            HelloService.setMessage($scope.message);
+        };
   }]);
    myApp.service('HelloService',[function(){
            console.log("HelloService is called");
@@ -16,13 +19,15 @@
                 return message;
            };
             this.setMessage=function(msg){
-                return this.message=msg;
+                return message=msg;
            }; 
    }]);
    
      myApp.controller('HelloController2',['$scope','HelloService',function($scope,HelloService){
               console.log("HelloController2 is called");
-        $scope.message=HelloService.sayHello();  
+             $scope.displayMessage=function(){
+               $scope.message=HelloService.sayHello();   
+             };
   }]);
 })();
 

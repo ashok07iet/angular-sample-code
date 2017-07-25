@@ -1,8 +1,8 @@
 (function(){
     var myApp = angular.module('myApp', []);
-    myApp.controller('DoubleController',[function(){
-        this.double=function(){
-            return this.num*2;
+    myApp.controller('DoubleController',['$scope',function($scope){
+        $scope.double=function(){
+            return $scope.num*2;
         };
     }]);
 })();
