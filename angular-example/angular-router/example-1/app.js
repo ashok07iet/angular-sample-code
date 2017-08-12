@@ -8,7 +8,7 @@
     app.config(function ($routeProvider) {
         $routeProvider
                 .when("/", {
-                    template: "<div>Main module</div>"
+                    template: "<div> Main module</div>"
                 })
                 .when("/red", {
                     template: "<div style='background-color:red'>red.html</div>"

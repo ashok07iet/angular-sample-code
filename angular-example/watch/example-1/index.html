@@ -9,7 +9,7 @@
 
 <body id="myApp" ng-app="myApp">
     <div ng-controller="MainCtrl">
-        <input ng-model="name" />
+        <input ng-model="name" ng-change="update()" />
         Name updated: {{updated}} times.
     </div>
 </body>

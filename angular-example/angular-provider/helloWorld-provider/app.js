@@ -23,8 +23,8 @@
             };
         }]);
     
-    myApp.config(function(WellcomeServiceProvider){
+   myApp.config(['WellcomeServiceProvider',function (WellcomeServiceProvider) {
         WellcomeServiceProvider.setName("admin-app");
-    });
+   }]);
 })();
 

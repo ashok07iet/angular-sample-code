@@ -9,9 +9,9 @@ app.controller('MainCtrl', function($scope) {
 
   $scope.updated = 0;
 
-  $scope.$watch('user', function(newValue, oldValue) {
+  $scope.$watch('user.name', function(newValue, oldValue) {
     if (newValue === oldValue) { return; }
     $scope.updated++;
-  }, true);
+  });
 });
 

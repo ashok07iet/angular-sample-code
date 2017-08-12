@@ -13,7 +13,7 @@ angular.module('myApp', [])
         });
         $scope.$watch('c',function(){
             console.log("c is modified");
-            $scope.a=$scope.a+10;
+          $scope.a=$scope.a+10;
         });
         $rootScope.$watch(function(){
             console.log("digest cycle triggred");

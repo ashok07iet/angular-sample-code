@@ -1,4 +1,4 @@
-(function() {
+( function() {
     var myApp = angular.module('myApp', []);
     myApp.factory('MathService', function() {
         return {
