@@ -8,7 +8,7 @@
 myApp.service('customerService',['$http',function($http){
          this.getCustomer = function (id) {
             return $http.get(
-                'http://localhost:8080/customer-service/customers/'+id,
+                'http://localhost:3000/api/dataservice/Customer/'+id,
                 {headers:{'remote-user':'admin'}}
             );
         };

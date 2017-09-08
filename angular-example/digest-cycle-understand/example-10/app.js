@@ -12,11 +12,11 @@ app.controller('MainCtrl1', function($scope) {
   }, 2000);
   
 });
-app.controller('MainCtrl2', function($scope) {
+app.controller('MainCtrl2', function($scope,$rootScope) {
   setTimeout(function() {
     $scope.message2 = 'message2 Fetched after two seconds';
     console.log('message2:' + $scope.message);
-    $scope.$apply(); //this triggers a $digest
+    $rootScope.$digest(); //this triggers a $digest
   }, 2000);
   
 });

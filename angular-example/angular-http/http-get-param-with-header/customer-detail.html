@@ -13,17 +13,17 @@ and open the template in the editor.
         <script src="customer.controller.js"></script>
         <script src="customer.service.js"></script>
     </head>
-   <body ng-app="myApp">
+    <body ng-app="myApp">
         <div ng-controller="customerController">
-             <label>customerId</label><input ng-model='cusId'/><button ng-click='find()'>find</button><br/>
+            <label>customerId</label><input ng-model='cusId'/><button ng-click='find()'>find</button><br/>
             <table>
                 <tr>
                     <th>FirstName</th>
                     <th>LastName</th>
                 </tr>  
-                <tr ng-repeat="cus in customers">
-                    <td>{{cus.FirstName}}</td>
-                    <td>{{cus.LastName}}</td>
+                <tr >
+                    <td>{{customer.firstName}}</td>
+                    <td>{{customer.lastName}}</td>
                 </tr>
             </table>
         </div>

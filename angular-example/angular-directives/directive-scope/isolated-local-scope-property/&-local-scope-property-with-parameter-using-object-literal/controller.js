@@ -50,7 +50,7 @@
             },
             controller:function($scope){
                 $scope.changeCustomer=function(){
-                 $scope.action({name:"ashok",street:"btm"});   
+                 $scope.action({name1:"ashok",street1:"btm"});   
                 };
             },
             template: '<ul><li ng-repeat="prop in datasource">{{ prop }}</li></ul> ' +

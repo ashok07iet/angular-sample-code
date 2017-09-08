@@ -9,12 +9,11 @@
     myApp.controller('customerController', ['$scope', 'customerService', function ($scope, customerService) {
               $scope.find=function(){
                 var result = customerService.getCustomer($scope.cusId);
-                result.success(function (response) {
-                    $scope.customers = response;
-                });
-                result.error(function (err) {
+                result.then(function (response) {
+                    $scope.customer = response.data;
+                },function(err){
                     console.log(err);
-                }); 
+                });
             };
         }]);
 })();

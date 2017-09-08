@@ -9,7 +9,7 @@ myApp.service('customerService',['$http',function($http){
         this.getCustomers = function () {
              return $http({
                 method: 'Get',
-                url: 'customer.json1'
+                url: 'http://localhost:8383/angular-sample-code/angular-http/http-get/customer.json'
             });
         };
 }]);

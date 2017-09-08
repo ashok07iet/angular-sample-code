@@ -48,8 +48,7 @@
                 datasource: '=',
                 action: '&'
             },
-            template: '<ul><li ng-repeat="prop in datasource">{{ prop }}</li></ul> ' +
-                    '<button ng-click="action()">Change Data</button>'
+           template: '<ul><li ng-repeat="prop in datasource">{{ prop }}</li></ul> ' +                    '<button ng-click="action()">Change Data</button>'
         };
     });
 })();

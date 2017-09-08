@@ -9,7 +9,7 @@ myApp.service('customerService',['$http',function($http){
         this.createCustomer = function (customer) {
             return $http({
                 method: 'Post',
-                url: 'http://localhost:8080/customer-service/customers/',
+                url: 'http://localhost:3000/api/dataservice/PostCustomer/',
                 data:customer
             });
         };

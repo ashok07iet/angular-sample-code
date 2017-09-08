@@ -45,7 +45,7 @@
         }]).directive('myIsolatedScopeWithName', function () {
         return {
             scope: {
-                name: '@name'
+                name: '@'
             },
             template: '<div>Name: {{ name }}</div> <input type="text" ng-model="name">'
         };

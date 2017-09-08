@@ -9,7 +9,7 @@ myApp.service('customerService',['$http',function($http){
         this.getCustomers = function () {
             return $http({
                 method: 'Get',
-                url: 'http://localhost:8080/customer-service/customers/',
+                url: 'http://localhost:3000/api/dataservice/customers/',
                 headers:{'remote-user':'admin'}
             });
         };
